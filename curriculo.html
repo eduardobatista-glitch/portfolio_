@@ -1,188 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Currículo · Eduardo da Costa Batista</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-  <body>
-    <header class="topo">
-      <div class="container topo-interno">
-        <a href="index.html" class="brand">Eduardo da Costa Batista</a>
-        <nav aria-label="Menu principal">
-          <a href="index.html">Sobre</a>
-          <a href="pesquisa.html">Pesquisa</a>
-          <a href="publicacoes.html">Publicações</a>
-          <a href="curriculo.html" aria-current="page">Currículo</a>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Eduardo da Costa Batista</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    h1 {
+      font-size: 36px;
+      font-weight: 300;
+      color: #111;
+      margin-bottom: 25px;
+    }
+    .cv-section {
+      font-size: 24px;
+      font-weight: 400;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      color: #111;
+      border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 5px;
+    }
+    .cv-item-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    .cv-item-sub {
+      font-size: 14px;
+      color: #828282;
+      margin-bottom: 8px;
+    }
+    .cv-desc {
+      font-size: 16px;
+      color: #111;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .cv-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    .cv-list li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" rel="author" href="index.html">Eduardo da Costa Batista</a>
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="index.html">About</a>
+          <a class="page-link" href="group.html">Group</a>
+          <a class="page-link" href="pesquisa.html">Research</a>
+          <a class="page-link" href="publicacoes.html">Publications</a>
+          <a class="page-link" href="monitorias.html">Teaching</a>
+          <a class="page-link" href="curriculo.html">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="home">
+        
+        <h1>Curriculum Vitae</h1>
+        
+        <p class="cv-desc" style="margin-bottom: 25px;">
+          Versão completa disponível no <a href="http://lattes.cnpq.br" target="_blank">Lattes CNPq</a>.
+        </p>
+
+        <!-- TRAJETÓRIA & FORMAÇÃO -->
+        <h2 class="cv-section">Trajetória & Formação</h2>
+
+        <div class="cv-item-title">Graduação em Engenharia Agronômica</div>
+        <div class="cv-item-sub">Universidade Federal do Amazonas (UFAM), Campus Humaitá</div>
+        <p class="cv-desc">Pesquisador no Laboratório de Ictiologia e Ordenamento Pesqueiro (LIOP).</p>
+
+        <div class="cv-item-title">Bolsista de Iniciação Científica (PIBIC/UFAM)</div>
+        <p class="cv-desc">Projeto: Sistematização de Dados de Solos na Amazônia, sob coordenação do Prof. Dr. Deyvid Diego Maranha.</p>
+
+        <div class="cv-item-title">Bolsista de Iniciação Científica (PIBIC/CNPq)</div>
+        <p class="cv-desc">Projeto: Monitoramento do desembarque pesqueiro artesanal na região do Médio Rio Madeira, sudoeste da Amazônia.</p>
+
+        <div class="cv-item-title">Certificações Técnicas em Métricas & Cloud</div>
+        <p class="cv-desc">Google Inc.: Manage GA4 Data and Learn to Read Reports e Google Ads App.</p>
+
+        <div class="cv-item-title">Técnico em Agropecuária</div>
+        <div class="cv-item-sub">Instituto Federal do Amazonas (IFAM), Campus Humaitá</div>
+        <p class="cv-desc">Registro profissional no Conselho Federal dos Técnicos Agrícolas (CFTA). Trabalho de conclusão: levantamento topográfico para apoio à gestão territorial e agropecuária.</p>
+
+
+        <!-- PRÊMIOS & RECONHECIMENTOS -->
+        <h2 class="cv-section">Prêmios & Reconhecimentos</h2>
+
+        <div class="cv-item-sub" style="margin-top: 20px;">2026</div>
+        <div class="cv-item-title">Menção Honrosa — XX Congresso de Iniciação Científica (CONIC / UFAM)</div>
+        <p class="cv-desc">Instituto de Educação, Agricultura e Ambiente (IEAA / UFAM). Premiado pela pesquisa com foco em monitoramento pesqueiro e sistematização de dados da bacia do Médio Rio Madeira.</p>
+
+        <div class="cv-item-sub" style="margin-top: 20px;">2025</div>
+        <div class="cv-item-title">Melhor Trabalho (Menção Honrosa) — 54º Congresso Brasileiro de Fitopatologia</div>
+        <p class="cv-desc">Categoria: Métodos Fitopatológicos. Trabalho premiado: “Protótipo de algoritmo em Python para avaliação de mancha foliar de <em>Phoma</em> sp. em clones do Café Robusta amazônicos”.</p>
+
       </div>
-    </header>
+    </div>
+  </main>
 
-    <main class="container page-content">
-      <h1>Trajetória &amp; Formação</h1>
-      <p class="subtitulo">
-        Versão completa no
-        <a href="https://lattes.cnpq.br/" target="_blank" rel="noreferrer">
-          Lattes CNPq
-        </a>.
-      </p>
-
-      <section class="panel">
-        <h3>Graduação em Engenharia Agronômica</h3>
-        <p>
-          Universidade Federal do Amazonas (UFAM), Campus Humaitá. Pesquisador
-          no Laboratório de Ictiologia e Ordenamento Pesqueiro (LIOP).
-        </p>
-      </section>
-
-      <section class="panel">
-        <h3>Bolsista de Iniciação Científica (PIBIC/UFAM)</h3>
-        <p>
-          Projeto: Sistematização de Dados de Solos na Amazônia, sob coordenação
-          do Prof. Dr. Deyvid Diego Maranha.
-        </p>
-      </section>
-
-      <section class="panel">
-        <h3>Bolsista de Iniciação Científica (PIBIC/CNPq)</h3>
-        <p>
-          Projeto: Monitoramento do desembarque pesqueiro artesanal na região do
-          médio rio Madeira, sudoeste da Amazônia.
-        </p>
-      </section>
-
-      <section class="panel">
-        <h3>Certificações Técnicas em Métricas &amp; Cloud</h3>
-        <p>
-          Google Inc.: Manage GA4 Data and Learn to Read Reports e Google Ads
-          App.
-        </p>
-      </section>
-
-      <section class="panel">
-        <h3>Técnico em Agropecuária</h3>
-        <p>
-          Instituto Federal do Amazonas (IFAM), Campus Humaitá. Registro
-          profissional no Conselho Federal dos Técnicos Agrícolas (CFTA).
-          Trabalho de conclusão: levantamento topográfico para apoio à gestão
-          territorial e agropecuária.
-        </p>
-      </section>
-
-      <h2>Prêmios &amp; Reconhecimentos</h2>
-      <ul class="lista">
-        <li>
-          <span class="data">2026</span>
-          <p>
-            <strong>
-              Menção Honrosa — XX Congresso de Iniciação Científica (CONIC /
-              UFAM)
-            </strong>
-            <br />
-            Instituto de Educação, Agricultura e Ambiente (IEAA / UFAM).
-            Premiado pela pesquisa com foco em monitoramento pesqueiro e
-            sistematização de dados da bacia do Médio Rio Madeira.
-          </p>
-        </li>
-        <li>
-          <span class="data">2025</span>
-          <p>
-            <strong>
-              Melhor Trabalho (Menção Honrosa) — 54º Congresso Brasileiro de
-              Fitopatologia
-            </strong>
-            <br />
-            Categoria: Métodos Fitopatológicos. Trabalho premiado: “Protótipo
-            de algoritmo em Python para avaliação de mancha foliar de
-            <em>Phoma</em> sp. em clones do Café Robusta amazônicos”.
-          </p>
-        </li>
-        <li>
-          <span class="data">2025</span>
-          <p>
-            <strong>
-              Prêmio de Destaque / Menção Honrosa — 2º Workshop de Agronomia do
-              Sul do Amazonas
-            </strong>
-            <br />
-            Projeto premiado: AgroConecta. Destaque pela integração e
-            valorização das cadeias produtivas da agricultura familiar no Sul
-            do Amazonas.
-          </p>
-        </li>
-      </ul>
-
-      <h2>Habilidades &amp; Idiomas</h2>
-      <div class="colunas">
-        <section>
-          <h3>Pesquisa &amp; Agrotecnologia</h3>
-          <ul>
-            <li>Python (Data Science, Imagens)</li>
-            <li>Google Colab &amp; Cloud</li>
-            <li>Sensoriamento Remoto &amp; QGIS</li>
-            <li>Topografia (Caminhamento)</li>
-            <li>Google Analytics 4 (GA4)</li>
-            <li>Manejo de Recursos Pesqueiros</li>
+  <footer class="site-footer h-card">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li class="p-name">Eduardo da Costa Batista</li>
+            <li><a class="u-email" href="mailto:eduardo.barista0998@gmail.com">eduardo.barista0998@gmail.com</a></li>
           </ul>
-        </section>
-
-        <section>
-          <h3>Idiomas</h3>
-          <ul>
-            <li>Português (Nativo)</li>
-            <li>Inglês (Fluente)</li>
-            <li>Espanhol (Intermediário)</li>
-            <li>Francês (Boa Leitura)</li>
-          </ul>
-        </section>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-col">
-          <div class="footer-name">Eduardo da Costa Batista</div>
-          <div class="footer-email">
-            <a href="mailto:eduardo.barista0998@gmail.com">
-              eduardo.barista0998@gmail.com
-            </a>
-          </div>
         </div>
 
-        <div class="footer-col footer-social" aria-label="Redes e perfis">
-          <div class="social-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 3 .1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .4.4.8 1 .8 2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
-            </svg>
-            <a href="https://github.com/eduardobatista-glitch" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-          <div class="social-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z" />
-            </svg>
-            <a href="https://x.com/Eduardo44694421" target="_blank" rel="noreferrer">X / Twitter</a>
-          </div>
-          <div class="social-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m2 8 10-5 10 5-10 5L2 8Zm4 3.1 6 3 6-3V16c-3.5 3-8.5 3-12 0v-4.9ZM22 9v7h-1V9h1Z" />
-            </svg>
-            <a href="https://scholar.google.com.br/citations?user=D_aGM8UAAAAJ&amp;hl=pt-BR" target="_blank" rel="noreferrer">Google Scholar</a>
-          </div>
-          <div class="social-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4ZM3.3 9h3.8v12H3.3V9Zm6.2 0h3.6v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.7V21h-3.8v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.5V9Z" />
-            </svg>
-            <a href="https://www.linkedin.com/in/eduardo-batista-7bba08291/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
+        <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+            <li>
+              <a href="https://github.com/eduardobatista-glitch" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+                <span class="username">eduardobatista-glitch</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/Eduardo44694421" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+                <span class="username">Eduardo44694421</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://scholar.google.com.br/citations?user=D_aGM8UAAAAJ&hl=pt-BR" target="_blank">
+                <span class="username">Google Scholar</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/eduardo-batista-7bba08291/" target="_blank">
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+</body>
 </html>
