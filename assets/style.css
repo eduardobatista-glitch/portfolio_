@@ -32,7 +32,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Largura do container central */
+/* Largura do container central exata */
 .wrapper {
   max-width: 800px;
   margin-right: auto;
@@ -102,11 +102,11 @@ a:hover {
   flex: 1;
 }
 
-/* FOTO FORÇADA A FLUTUAR EXATAMENTE À DIREITA */
+/* FOTO COMPACTA NA DIREITA COM ESPAÇO EM BRANCO ABAIXO */
 .profile-pic {
   float: right !important;
-  width: 220px !important;
-  margin-left: 25px !important;
+  width: 200px !important;
+  margin-left: 30px !important;
   margin-bottom: 15px !important;
   border-radius: 2px;
 }
