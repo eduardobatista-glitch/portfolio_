@@ -103,11 +103,16 @@ a:hover {
   flex: 1;
 }
 
-/* FOTO DE PERFIL COMPACTA (Idêntica à proporção do Tom Rainforth) */
+/* Restringe a largura da área de texto principal para forçar o espaçamento igual ao do Tom */
+.home {
+  max-width: 740px;
+}
+
+/* FOTO DE PERFIL COMPACTA ALINHADA À DIREITA */
 .profile-pic {
   float: right !important;
-  width: 175px !important;
-  margin-left: 25px !important;
+  width: 190px !important;
+  margin-left: 35px !important;
   margin-bottom: 15px !important;
   border-radius: 2px;
 }
