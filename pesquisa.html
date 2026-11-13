@@ -1,75 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pesquisa · Eduardo da Costa Batista</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-
-  <header class="topo">
-    <div class="container topo-interno">
-      <a class="logo" href="index.html">Eduardo da Costa Batista</a>
-      <nav>
-        <a href="index.html">Sobre</a>
-        <a href="pesquisa.html" aria-current="page">Pesquisa</a>
-        <a href="publicacoes.html">Publicações</a>
-        <a href="curriculo.html">Currículo</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h1>Linhas de pesquisa</h1>
-    <p class="sub">Ictiologia, solos, agrotecnologia e computação em nuvem aplicadas à Amazônia.</p>
-
-    <section class="bloco">
-      <span class="etiqueta">Ictiologia &amp; Manejo · 2023 – Atual</span>
-      <h3>Monitoramento da Pesca Artesanal no Médio Rio Madeira</h3>
-      <p>Levantamento biométrico contínuo e análise do esforço pesqueiro na Colônia de Pescadores Z-31 e no Mercado Municipal de Humaitá/AM, aplicando a metodologia participativa TSBCAMP.</p>
-      <p class="meta">Coordenação: Prof. Dr. Marcelo Rodrigues dos Anjos (LIOP/UFAM)</p>
-    </section>
-
-    <section class="bloco">
-      <span class="etiqueta">Ciência do Solo · 2024 – 2025</span>
-      <h3>Sistematização de Dados Pedológicos da Amazônia</h3>
-      <p>Compilação, tratamento e estruturação de bases de dados de solos na Amazônia Ocidental, integrando levantamentos de campo e relatórios institucionais para suporte ao planejamento agrícola e conservação de recursos naturais.</p>
-      <p class="meta">Bolsa PIBIC/UFAM · Coordenação: Prof. Dr. Deyvid Diego Maranha</p>
-    </section>
-
-    <section class="bloco">
-      <span class="etiqueta">Python &amp; Fitopatologia · 2025</span>
-      <h3>Diagnose Digital de <em>Phoma</em> sp. em Café Robusta</h3>
-      <p>Desenvolvimento de script em Python para segmentação de imagens de folhas e quantificação da área lesionada por <em>Phoma</em> sp. em clones de <em>Coffea canephora</em> (Robusta amazônico).</p>
-      <p class="meta">Apresentado no 54º CONBRAF (Lavras, MG)</p>
-    </section>
-
-    <section class="bloco">
-      <span class="etiqueta">Cloud &amp; Solos · 2026</span>
-      <h3>Recomendação de Adubação em Nuvem via Google Colab</h3>
-      <p>Rotina computacional em ambiente de nuvem, parametrizada para cálculo automatizado de exigências nutricionais e calagem de solos tropicais amazônicos a partir de laudos analíticos.</p>
-      <p class="meta">II Simpósio das Cadeias Produtivas da Região Sul do Amazonas</p>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <div class="container rodape-interno">
-      <div>
-        <div class="cinza">Eduardo da Costa Batista</div>
-        <div class="cinza">Humaitá, AM • UFAM / LIOP</div>
-        <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pesquisa · Eduardo da Costa Batista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="container topo-interno">
+        <a href="index.html" class="brand">Eduardo da Costa Batista</a>
+        <nav aria-label="Menu principal">
+          <a href="index.html">Sobre</a>
+          <a href="pesquisa.html" aria-current="page">Pesquisa</a>
+          <a href="publicacoes.html">Publicações</a>
+          <a href="curriculo.html">Currículo</a>
+        </nav>
       </div>
-      <div>
-        <div><a href="https://github.com/seu-usuario">GitHub</a></div>
-        <div><a href="https://lattes.cnpq.br/">Lattes CNPq</a></div>
-        <div class="cinza">© 2026 Eduardo da Costa Batista</div>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-</body>
+    <main class="container page-content">
+      <h1>Linhas de pesquisa</h1>
+      <p class="subtitulo">
+        Ictiologia, solos, agrotecnologia e computação em nuvem aplicadas à
+        Amazônia.
+      </p>
+
+      <section class="panel">
+        <span class="etiqueta">Ictiologia &amp; Manejo · 2023 – Atual</span>
+        <h3>Monitoramento da Pesca Artesanal no Médio Rio Madeira</h3>
+        <p>
+          Levantamento biométrico contínuo e análise do esforço pesqueiro na
+          Colônia de Pescadores Z-31 e no Mercado Municipal de Humaitá/AM,
+          aplicando a metodologia participativa TSBCAMPPE para subsidiar o
+          manejo sustentável dos recursos pesqueiros.
+        </p>
+        <p class="meta">
+          Coordenação: Prof. Dr. Marcelo Rodrigues dos Anjos (LIOP/UFAM)
+        </p>
+      </section>
+
+      <section class="panel">
+        <span class="etiqueta">Ciência do Solo · 2024 – 2025</span>
+        <h3>Sistematização de Dados Pedológicos da Amazônia</h3>
+        <p>
+          Compilação, tratamento e estruturação de bases de dados de solos na
+          Amazônia Ocidental, integrando levantamentos de campo e relatórios
+          institucionais para suporte ao planejamento agrícola e à gestão
+          territorial.
+        </p>
+        <p class="meta">
+          Bolsa PIBIC/UFAM · Coordenação: Prof. Dr. Deyvid Diego Maranha
+        </p>
+      </section>
+
+      <section class="panel">
+        <span class="etiqueta">Python &amp; Fitopatologia · 2025</span>
+        <h3>Diagnose Digital de <em>Phoma</em> sp. em Café Robusta</h3>
+        <p>
+          Desenvolvimento de scripts em Python para segmentação de imagens de
+          folhas e quantificação da área lesionada por <em>Phoma</em> sp. em
+          clones de <em>Coffea canephora</em> (Robusta amazônico).
+        </p>
+        <p class="meta">Apresentado no 54º CONBRAF (Lavras, MG)</p>
+      </section>
+
+      <section class="panel">
+        <span class="etiqueta">Cloud &amp; Solos · 2026</span>
+        <h3>Recomendação de Adubação em Nuvem via Google Colab</h3>
+        <p>
+          Rotina computacional em ambiente de nuvem, parametrizada para cálculo
+          automatizado de exigências nutricionais e calagem de solos tropicais
+          amazônicos a partir de laudos analíticos.
+        </p>
+        <p class="meta">
+          II Simpósio das Cadeias Produtivas da Região Sul do Amazonas
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="footer-name">Eduardo da Costa Batista</div>
+          <div class="footer-email">
+            <a href="mailto:eduardo.barista0998@gmail.com">
+              eduardo.barista0998@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-social" aria-label="Redes e perfis">
+          <div class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 3 .1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .4.4.8 1 .8 2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
+            </svg>
+            <a href="https://github.com/eduardobatista-glitch" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <div class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z" />
+            </svg>
+            <a href="https://x.com/Eduardo44694421" target="_blank" rel="noreferrer">X / Twitter</a>
+          </div>
+          <div class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m2 8 10-5 10 5-10 5L2 8Zm4 3.1 6 3 6-3V16c-3.5 3-8.5 3-12 0v-4.9ZM22 9v7h-1V9h1Z" />
+            </svg>
+            <a href="https://scholar.google.com.br/citations?user=D_aGM8UAAAAJ&amp;hl=pt-BR" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+          <div class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4ZM3.3 9h3.8v12H3.3V9Zm6.2 0h3.6v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.7V21h-3.8v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.5V9Z" />
+            </svg>
+            <a href="https://www.linkedin.com/in/eduardo-batista-7bba08291/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
