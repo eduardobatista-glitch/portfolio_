@@ -1,39 +1,63 @@
-// Filtros e busca da página de publicações
 (function () {
-  var botoes = document.querySelectorAll('.filtros button');
-  var pubs = document.querySelectorAll('.pub');
-  var busca = document.getElementById('busca');
-  var vazio = document.getElementById('vazio');
+  const filterButtons = document.querySelectorAll(".filtro");
+  const pubs = document.querySelectorAll(".pub");
+  const searchInput = document.getElementById("busca");
+  const emptyState = document.getElementById("vazio");
+
   if (!pubs.length) return;
 
-  var categoria = 'todos';
+  let activeFilter = "todos";
 
-  function normalizar(t) {
-    return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  function normalizeText(value) {
+    return (value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
-  function aplicar() {
-    var termo = busca ? normalizar(busca.value.trim()) : '';
-    var visiveis = 0;
-    pubs.forEach(function (p) {
-      var cats = (p.getAttribute('data-cat') || '').split(' ');
-      var okCat = categoria === 'todos' || cats.indexOf(categoria) !== -1;
-      var okBusca = !termo || normalizar(p.textContent).indexOf(termo) !== -1;
-      p.hidden = !(okCat && okBusca);
-      if (!p.hidden) visiveis++;
+  function applyFilters() {
+    const searchTerm = searchInput ? normalizeText(searchInput.value.trim()) : "";
+    let visibleCount = 0;
+
+    pubs.forEach((pub) => {
+      const categories = (pub.dataset.cat || "").split(" ");
+      const matchesCategory =
+        activeFilter === "todos" || categories.includes(activeFilter);
+
+      const matchesSearch =
+        !searchTerm ||
+        normalizeText(pub.textContent).includes(searchTerm);
+
+      const shouldShow = matchesCategory && matchesSearch;
+
+      pub.hidden = !shouldShow;
+
+      if (shouldShow) visibleCount++;
     });
-    if (vazio) vazio.hidden = visiveis !== 0;
+
+    if (emptyState) {
+      emptyState.hidden = visibleCount !== 0;
+    }
   }
 
-  botoes.forEach(function (b) {
-    b.addEventListener('click', function () {
-      botoes.forEach(function (x) { x.classList.remove('ativo'); x.setAttribute('aria-pressed', 'false'); });
-      b.classList.add('ativo');
-      b.setAttribute('aria-pressed', 'true');
-      categoria = b.getAttribute('data-filtro');
-      aplicar();
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("ativo");
+        btn.setAttribute("aria-pressed", "false");
+      });
+
+      button.classList.add("ativo");
+      button.setAttribute("aria-pressed", "true");
+
+      activeFilter = button.dataset.filtro || "todos";
+      applyFilters();
     });
   });
 
-  if (busca) busca.addEventListener('input', aplicar);
+  if (searchInput) {
+    searchInput.addEventListener("input", applyFilters);
+  }
+
+  applyFilters();
 })();
