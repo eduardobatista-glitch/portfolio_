@@ -1,4 +1,4 @@
-/* Estilo Base Global Acadêmico (Minima Theme Ref) */
+/* Réplica exata do tema Jekyll Minima */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container centralizado idêntico ao Tom Rainforth */
+/* Largura do container central */
 .wrapper {
   max-width: 800px;
   margin-right: auto;
@@ -47,7 +47,7 @@ a:hover {
   clear: both;
 }
 
-/* Cabeçalho exato */
+/* Cabeçalho */
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
@@ -100,6 +100,15 @@ a:hover {
 .page-content {
   padding: 30px 0;
   flex: 1;
+}
+
+/* FOTO FORÇADA A FLUTUAR EXATAMENTE À DIREITA */
+.profile-pic {
+  float: right !important;
+  width: 220px !important;
+  margin-left: 25px !important;
+  margin-bottom: 15px !important;
+  border-radius: 2px;
 }
 
 /* Rodapé */
