@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publicações · Eduardo da Costa Batista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-interno">
+      <a class="logo" href="index.html">Eduardo da Costa Batista</a>
+      <nav>
+        <a href="index.html">Sobre</a>
+        <a href="pesquisa.html">Pesquisa</a>
+        <a href="publicacoes.html" aria-current="page">Publicações</a>
+        <a href="curriculo.html">Currículo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Publicações selecionadas</h1>
+    <p class="sub">A lista completa está no <a href="https://lattes.cnpq.br/">Lattes CNPq</a>.</p>
+
+    <div class="filtros" role="group" aria-label="Filtrar por tipo">
+      <button type="button" class="ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" data-filtro="periodicos" aria-pressed="false">Periódicos</button>
+      <button type="button" data-filtro="internacional" aria-pressed="false">Internacional</button>
+      <button type="button" data-filtro="congressos" aria-pressed="false">Congressos</button>
+      <button type="button" data-filtro="python" aria-pressed="false">Python / Agrotech</button>
+    </div>
+
+    <input id="busca" class="busca" type="search" placeholder="Buscar no título ou autor..." aria-label="Buscar publicações">
+
+    <article class="pub" data-cat="periodicos">
+      <span class="onde">Medicina (Ribeirão Preto. Online) · 2025</span>
+      <h3>Análise espaço-temporal da dinâmica de focos de calor no interflúvio Purus-Madeira, Amazônia Ocidental em território brasileiro</h3>
+      <p class="autores">MACEDO FILHO, H. F.; <strong>BATISTA, E. C.</strong>; LOURENCO, I. H.; ANJOS, M. R.; REIS, R. M.; LIM, M. A.</p>
+      <p>Mapeamento e modelagem temporal de queimadas no corredor entre os rios Purus e Madeira utilizando produtos orbitais de sensoriamento remoto.</p>
+    </article>
+
+    <article class="pub" data-cat="periodicos">
+      <span class="onde">Revista SELPER · 2025</span>
+      <h3>Sensoriamento remoto aplicado a mapeamento vegetativo e detecção de sintomas em plantas de soja no sudoeste da Amazônia</h3>
+      <p class="autores"><strong>BATISTA, E. C.</strong>; MACEDO FILHO, H.; MARANHA, D. D.</p>
+      <p>Uso de índices espectrais e sensoriamento de alta resolução espacial para detecção precoce de anomalias e estresses fitossanitários em lavouras de soja.</p>
+    </article>
+
+    <article class="pub" data-cat="periodicos">
+      <span class="onde">Revista SELPER · 2025</span>
+      <h3>Análise espacial de focos de calor em unidades de conservação no interflúvio Purus-Madeira, Amazônia Ocidental Brasileira</h3>
+      <p class="autores">MACEDO FILHO, H. F.; <strong>BATISTA, E. C.</strong></p>
+      <p>Quantificação da ocorrência de queimadas e anomalias térmicas no interior e zonas de amortecimento de Unidades de Conservação.</p>
+    </article>
+
+    <article class="pub" data-cat="internacional congressos">
+      <span class="onde">FoodTec Conference · Portugal · 2025</span>
+      <h3>Temporal distribution and occurrence patterns of freshwater fish species in the Brazilian Amazon and Portugal</h3>
+      <p class="autores"><strong>BATISTA, E. C.</strong>; ANJOS, M. R.</p>
+      <p>Publicado no Book of Abstracts do Instituto Politécnico de Braga / Porto, Portugal. Estudo comparativo de padrões de ocorrência em bacias fluviais.</p>
+    </article>
+
+    <article class="pub" data-cat="congressos python">
+      <span class="onde">54º CONBRAF · 2025</span>
+      <h3>Protótipo de algoritmo em Python para avaliação de mancha foliar de Phoma sp. em clones do café robusta amazônicos</h3>
+      <p class="autores"><strong>BATISTA, E. C.</strong>; SOUZA, M. S.</p>
+      <p>Apresentado no 54º Congresso Brasileiro de Fitopatologia (Lavras, MG). Algoritmo de processamento digital de imagem para cafeicultura clonal.</p>
+    </article>
+
+    <article class="pub" data-cat="congressos python">
+      <span class="onde">II Simpósio Cadeias Produtivas · 2026</span>
+      <h3>Algoritmo para recomendação de adubação amazônica: processamento em nuvem via Google Colab</h3>
+      <p class="autores"><strong>BATISTA, E. C.</strong></p>
+      <p>Automação em nuvem de recomendações de calagem e adubação para solos do sul do Amazonas.</p>
+    </article>
+
+    <article class="pub" data-cat="congressos python">
+      <span class="onde">III Simpósio Cadeias Produtivas · 2026</span>
+      <h3>AGROCONECTA: Aplicativo para integração e valorização das cadeias produtivas vegetais na região de Humaitá-AM</h3>
+      <p class="autores"><strong>BATISTA, E. C.</strong></p>
+      <p>Proposta de ferramenta digital para conectar pequenos produtores e cooperativas agrícolas locais.</p>
+    </article>
+
+    <p id="vazio" class="vazio" hidden>Nenhuma publicação encontrada com esses filtros.</p>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-interno">
+      <div>
+        <div class="cinza">Eduardo da Costa Batista</div>
+        <div class="cinza">Humaitá, AM • UFAM / LIOP</div>
+        <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+      </div>
+      <div>
+        <div><a href="https://github.com/seu-usuario">GitHub</a></div>
+        <div><a href="https://lattes.cnpq.br/">Lattes CNPq</a></div>
+        <div class="cinza">© 2026 Eduardo da Costa Batista</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
