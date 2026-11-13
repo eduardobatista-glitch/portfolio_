@@ -11,40 +11,34 @@
       font-size: 36px;
       font-weight: 300;
       color: #111;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
-    .research-category {
+    .intro-text {
+      margin-bottom: 30px;
+      color: #111;
+      line-height: 1.5;
+    }
+    .research-section-title {
       font-size: 24px;
       font-weight: 400;
       margin-top: 35px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #111;
-      border-bottom: 1px solid #e8e8e8;
-      padding-bottom: 5px;
     }
-    .research-period {
-      font-size: 14px;
-      color: #828282;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    .research-item {
+    .research-list {
+      list-style-type: disc;
+      padding-left: 20px;
       margin-bottom: 25px;
     }
-    .research-item h3 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #111;
-      margin-bottom: 5px;
-    }
-    .research-item p {
+    .research-list li {
+      margin-bottom: 18px;
       line-height: 1.5;
       color: #111;
-      margin-bottom: 8px;
     }
     .research-meta {
       font-size: 14px;
-      color: #424242;
+      color: #666;
+      margin-top: 3px;
     }
   </style>
 </head>
@@ -68,47 +62,51 @@
     <div class="wrapper">
       <div class="home">
         
-        <h1>Research Lines & Projects</h1>
-
-        <!-- 1. ICTIOLOGIA & MANEJO -->
-        <h2 class="research-category">Ictiologia & Manejo</h2>
+        <h1>Research</h1>
         
-        <div class="research-item">
-          <div class="research-period">2023 – Atual</div>
-          <h3>Monitoramento da Pesca Artesanal no Médio Rio Madeira</h3>
-          <p>Levantamento biométrico contínuo e análise do esforço pesqueiro na Colônia de Pescadores Z-31 e no Mercado Municipal de Humaitá/AM, aplicando a metodologia participativa Tecnologia de Baixo Custo Aplicada ao Monitoramento da Pesca em Pequena Escala (TSBCAMPPE).</p>
-          <div class="research-meta"><strong>Coordenação:</strong> Prof. Dr. Marcelo Rodrigues dos Anjos (LIOP/UFAM)</div>
-        </div>
+        <p class="intro-text">
+          Minhas linhas de pesquisa articulam ictiologia, solos, agrotecnologia e computação em nuvem aplicadas à Amazônia.
+        </p>
 
-        <!-- 2. CIÊNCIA DO SOLO -->
-        <h2 class="research-category">Ciência do Solo</h2>
-        
-        <div class="research-item">
-          <div class="research-period">2024 – 2025</div>
-          <h3>Sistematização de Dados Pedológicos da Amazônia</h3>
-          <p>Compilação, tratamento e estruturação de bases de dados de solos na Amazônia Ocidental, integrando levantamentos de campo e relatórios institucionais para suporte ao planejamento agrícola e conservação de recursos naturais.</p>
-          <div class="research-meta"><strong>Bolsa PIBIC/UFAM</strong> • <strong>Coordenação:</strong> Prof. Dr. Deyvid Diego Maranha</div>
-        </div>
+        <!-- ICTIOLOGIA & MANEJO -->
+        <h2 class="research-section-title">Ictiologia & Manejo</h2>
+        <ul class="research-list">
+          <li>
+            <strong>Monitoramento da Pesca Artesanal no Médio Rio Madeira</strong> (2023 – Atual)<br>
+            Levantamento biométrico contínuo e análise do esforço pesqueiro na Colônia de Pescadores Z-31 e no Mercado Municipal de Humaitá/AM, aplicando a metodologia participativa Tecnologia de Baixo Custo Aplicada ao Monitoramento da Pesca em Pequena Escala (TSBCAMPPE) para subsidiar o manejo sustentável dos recursos pesqueiros.<br>
+            <div class="research-meta">Coordenação: Prof. Dr. Marcelo Rodrigues dos Anjos (LIOP/UFAM)</div>
+          </li>
+        </ul>
 
-        <!-- 3. PYTHON & FITOPATOLOGIA -->
-        <h2 class="research-category">Python & Fitopatologia</h2>
-        
-        <div class="research-item">
-          <div class="research-period">2025</div>
-          <h3>Diagnose Digital de Phoma sp. em Café Robusta</h3>
-          <p>Desenvolvimento de script em Python para segmentação de imagens de folhas e quantificação da área lesionada por Phoma sp. em clones de <em>Coffea canephora</em> (Robusta amazônico).</p>
-          <div class="research-meta">Apresentado no 54º CONBRAF (Lavras, MG)</div>
-        </div>
+        <!-- CIÊNCIA DO SOLO -->
+        <h2 class="research-section-title">Ciência do Solo</h2>
+        <ul class="research-list">
+          <li>
+            <strong>Sistematização de Dados Pedológicos da Amazônia</strong> (2024 – 2025)<br>
+            Compilação, tratamento e estruturação de bases de dados de solos na Amazônia Ocidental, integrando levantamentos de campo e relatórios institucionais para suporte ao planejamento agrícola e à gestão territorial.<br>
+            <div class="research-meta">Bolsa PIBIC/UFAM • Coordenação: Prof. Dr. Deyvid Diego Maranha</div>
+          </li>
+        </ul>
 
-        <!-- 4. CLOUD & SOLOS -->
-        <h2 class="research-category">Cloud & Solos</h2>
-        
-        <div class="research-item">
-          <div class="research-period">2026</div>
-          <h3>Recomendação de Adubação em Nuvem via Google Colab</h3>
-          <p>Rotina computacional em ambiente de nuvem parametrizada para cálculo automatizado de exigências nutricionais e calagem de solos tropicais amazônicos a partir de laudos analíticos.</p>
-          <div class="research-meta">II Simpósio das Cadeias Produtivas da Região Sul do Amazonas</div>
-        </div>
+        <!-- PYTHON & FITOPATOLOGIA -->
+        <h2 class="research-section-title">Python & Fitopatologia</h2>
+        <ul class="research-list">
+          <li>
+            <strong>Diagnose Digital de <em>Phoma</em> sp. em Café Robusta</strong> (2025)<br>
+            Desenvolvimento de scripts em Python para segmentação de imagens de folhas e quantificação da área lesionada por <em>Phoma</em> sp. em clones de <em>Coffea canephora</em> (Robusta amazônico).<br>
+            <div class="research-meta">Apresentado no 54º CONBRAF (Lavras, MG)</div>
+          </li>
+        </ul>
+
+        <!-- CLOUD & SOLOS -->
+        <h2 class="research-section-title">Cloud & Solos</h2>
+        <ul class="research-list">
+          <li>
+            <strong>Recomendação de Adubação em Nuvem via Google Colab</strong> (2026)<br>
+            Rotina computacional em ambiente de nuvem, parametrizada para cálculo automatizado de exigências nutricionais e calagem de solos tropicais amazônicos a partir de laudos analíticos.<br>
+            <div class="research-meta">II Simpósio das Cadeias Produtivas da Região Sul do Amazonas</div>
+          </li>
+        </ul>
 
       </div>
     </div>
