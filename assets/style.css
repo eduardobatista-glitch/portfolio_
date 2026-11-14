@@ -1,114 +1,116 @@
-/* =========================================================
-   MOBILE NAV / HAMBURGER MENU
-   ========================================================= */
-@media (max-width: 900px) {
-  .navbar {
-    height: auto;
-    min-height: var(--nav-height);
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-  .nav-container {
-    min-height: var(--nav-height);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    gap: 0.75rem;
-  }
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  .nav-left {
-    flex: 1 1 auto;
-    justify-content: space-between;
-    gap: 0.75rem;
-    min-width: 0;
-  }
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 25px 0;
+  margin-bottom: 40px;
+}
 
-  .nav-brand {
-    font-size: 0.96rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .nav-actions {
-    gap: 0.35rem;
-  }
+.site-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+}
 
-  .search-pill {
-    display: none;
-  }
+.site-nav .trigger {
+  display: flex;
+  gap: 20px;
+}
 
-  .mobile-menu-btn {
-    display: inline-flex;
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--border-light);
-    background: var(--bg-surface);
-    border-radius: var(--radius-sm);
-    color: var(--text-primary);
-    box-shadow: none;
-  }
+.site-nav .page-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+}
 
-  .mobile-menu-btn:hover {
-    background: var(--bg-subtle);
-    border-color: var(--border-dark);
-  }
+.site-nav .page-link:hover {
+  text-decoration: underline;
+}
 
-  nav {
-    position: static;
-  }
+.page-content {
+  padding-bottom: 40px;
+}
 
-  .nav-menu {
-    position: absolute;
-    top: calc(var(--nav-height) + 0.35rem);
-    right: 0.75rem;
-    left: auto;
-    min-width: 220px;
-    display: none;
+.home p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.profile-pic {
+  float: right;
+  width: 190px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 25px 0;
+  color: #828282;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footer-col-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-list, .social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li, .social-media-list li {
+  margin-bottom: 5px;
+}
+
+.social-media-list a {
+  color: #828282;
+  text-decoration: none;
+}
+
+.social-media-list a:hover {
+  color: #111;
+}
+
+@media screen and (max-width: 600px) {
+  .site-header .wrapper {
     flex-direction: column;
-    align-items: stretch;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: var(--bg-body);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-    overflow: hidden;
-    z-index: 1200;
+    align-items: flex-start;
+    gap: 15px;
   }
-
-  .nav-menu.mobile-open {
-    display: flex;
+  .site-nav .trigger {
+    flex-wrap: wrap;
+    gap: 12px;
   }
-
-  .nav-menu li {
-    width: 100%;
+  .profile-pic {
+    float: none;
     display: block;
-  }
-
-  .nav-link {
-    display: block;
+    margin: 0 auto 20px auto;
     width: 100%;
-    padding: 0.86rem 1rem;
-    font-size: 0.8rem;
-    color: var(--text-primary);
-    background: transparent;
-    border-bottom: 1px solid var(--border-light);
-    white-space: nowrap;
-    text-align: left;
-  }
-
-  .nav-menu li:last-child .nav-link {
-    border-bottom: none;
-  }
-
-  .nav-link:hover,
-  .nav-link.active {
-    color: var(--text-primary);
-    background: var(--bg-subtle);
-  }
-
-  .nav-link.active::after {
-    display: none;
+    max-width: 220px;
   }
 }
