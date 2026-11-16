@@ -1,46 +1,103 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/**
+ * Oxford Academic — Design System Exato (Jekyll Minima canonical theme)
+ * Portfólio de Eduardo da Costa Batista
+ */
+
 /* ==========================================================================
-   Oxford Academic Style - Exact Mirror of https://www.robots.ox.ac.uk/~twgr/
-   Theme: Jekyll Minima + twgr customizations (Source Sans Pro, 16px/1.5, #424242 header bar, justified text)
+   Reset & Base
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/* Reset */
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
-}
-
-/* Base Body Styling */
-body {
-  font: 400 16px/1.5 "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #111111;
   background-color: #ffffff;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
+  color: #111111;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Vertical Rhythm: exact 10px margin-bottom */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+/* ==========================================================================
+   Typography & Elements
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
 
-/* Headings: weight 400 */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  color: #111111;
+h3 {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-/* Paragraphs & Text: justified like twgr */
+h4 {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 p {
-  text-align: justify;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
-/* Links */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
 a {
   color: #2a7ae2;
   text-decoration: none;
@@ -55,9 +112,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container / Wrapper: max-width 860px (900px - 40px) */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Layout & Containers
+   ========================================================================== */
+
 .wrapper {
-  max-width: -webkit-calc(900px - (20px * 2));
   max-width: calc(900px - (20px * 2));
   margin-right: auto;
   margin-left: auto;
@@ -65,15 +129,24 @@ a:hover {
   padding-left: 20px;
 }
 
-.wrapper:after,
-.footer-col-wrapper:after,
-.nav:after {
+.wrapper::after,
+.home::after,
+.post-content::after,
+.footer-col-wrapper::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Site Header: 5px solid #424242 top bar, 1px solid #e8e8e8 bottom */
+.page-content {
+  padding: 30px 0;
+  flex: 1 0 auto;
+}
+
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
@@ -82,19 +155,16 @@ a:hover {
   background-color: #ffffff;
 }
 
-.site-title {
+.site-title,
+.site-title:visited {
   font-size: 26px;
   font-weight: 300;
   line-height: 56px;
   letter-spacing: -1px;
-  margin-bottom: 0;
+  color: #424242;
   float: left;
-  color: #424242;
+  margin-bottom: 0;
   text-decoration: none;
-}
-
-.site-title:visited {
-  color: #424242;
 }
 
 .site-title:hover {
@@ -105,6 +175,14 @@ a:hover {
 .site-nav {
   float: right;
   line-height: 56px;
+}
+
+.site-nav .menu-icon {
+  display: none;
+}
+
+.site-nav .trigger {
+  display: block;
 }
 
 .site-nav .page-link {
@@ -125,37 +203,32 @@ a:hover {
 
 .site-nav .page-link.active {
   font-weight: 600;
-  color: #111111;
-  text-decoration: underline;
 }
 
-.site-nav .menu-icon {
-  display: none;
-}
+/* ==========================================================================
+   Home & Photo Well (Disposição estilo Word: foto à direita com quebra de texto)
+   ========================================================================== */
 
-/* Page Content */
-.page-content {
-  padding: 30px 0;
-  min-height: 480px;
-}
-
-/* About / Home: photo-well floated right */
 #photo-well {
   float: right;
-  margin-left: 25px;
-  margin-bottom: 15px;
-  padding: 0 0 0 35px;
+  margin: 0 0 15px 22px;
+  padding: 0;
+  max-width: 210px;
 }
 
-#photo-well img,
-img[alt="photo"] {
-  max-width: 15em;
-  padding: 5px 0;
+#photo-well img {
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  padding: 0;
+  border-radius: 4px;
   display: block;
-  border-radius: 3px;
 }
 
-/* Articles and Subpages */
+/* ==========================================================================
+   Post & Article Content
+   ========================================================================== */
+
 .post-header {
   margin-bottom: 20px;
 }
@@ -163,7 +236,7 @@ img[alt="photo"] {
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
-  line-height: 1;
+  line-height: 1.15;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -172,153 +245,126 @@ img[alt="photo"] {
   margin-bottom: 20px;
 }
 
-.post-content h2 {
-  font-size: 32px;
-  font-weight: 400;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
+/* ==========================================================================
+   Publications & BibTeX
+   ========================================================================== */
 
-.post-content h3 {
-  font-size: 26px;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.post-content h4 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-/* Lists */
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-li {
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-/* Bibliography & Publication Pills */
 ul.bibliography {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-ul.bibliography > li {
-  margin-bottom: 18px;
+ul.bibliography>li {
+  margin-bottom: 25px;
   line-height: 1.5;
 }
 
-.nav {
+.nav-pills {
   list-style: none;
-  margin-left: 0;
   padding-left: 0;
-  margin-top: 4px;
-  margin-bottom: 8px;
-  white-space: nowrap;
+  margin: 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.nav-pills > li {
-  float: left;
+.nav-pills li {
   display: inline-block;
-  margin-right: 5px;
+  margin-bottom: 0;
 }
 
-.nav-pills > li > a.bib-materials {
+.bib-materials {
   display: inline-block;
-  padding: 2px 9px;
-  font-size: 13px;
-  line-height: 1.4;
-  color: #337ab7;
+  padding: 2px 10px;
   background-color: #f2f2f2;
-  border-radius: 3px;
+  color: #337ab7;
   text-decoration: none;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.1s ease;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.nav-pills > li > a.bib-materials:hover {
+.bib-materials:visited {
+  color: #337ab7;
+}
+
+.bib-materials:hover {
   background-color: #337ab7;
   color: #ffffff;
   text-decoration: none;
 }
 
-/* Collapsible Abstract & BibTeX blocks */
 .collapse-block {
   display: none;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  padding: 10px 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
   background-color: #f9f9f9;
   border-left: 3px solid #337ab7;
-  font-size: 14.5px;
-  line-height: 1.5;
+  font-size: 14px;
   text-align: justify;
 }
 
-.collapse-block.show {
-  display: block;
-}
-
-pre.bibtex-pre {
+.bibtex-pre {
   display: none;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  padding: 8px 12px;
-  font-size: 13.5px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
   background-color: #eef;
   border: 1px solid #e8e8e8;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-all;
   overflow-x: auto;
-  white-space: pre;
 }
 
-pre.bibtex-pre.show {
-  display: block;
-}
+/* ==========================================================================
+   Site Footer
+   ========================================================================== */
 
-/* Site Footer */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 20px 0 35px 0;
+  padding: 30px 0;
+  font-size: 14px;
   color: #828282;
-  font-size: 15px;
   background-color: #ffffff;
 }
 
 .footer-col-wrapper {
-  margin-left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .footer-col {
-  float: left;
-  margin-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(28% - 10px);
-  width: calc(28% - 10px);
+  width: 28%;
 }
 
 .footer-col-2 {
-  width: -webkit-calc(36% - 10px);
-  width: calc(36% - 10px);
+  width: 36%;
 }
 
 .footer-col-3 {
-  width: -webkit-calc(36% - 10px);
-  width: calc(36% - 10px);
+  width: 36%;
   text-align: right;
+}
+
+.footer-col-3 p {
+  text-align: inherit;
+  margin-bottom: 0;
 }
 
 .contact-list,
@@ -326,65 +372,105 @@ pre.bibtex-pre.show {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .contact-list li,
 .social-media-list li {
   margin-bottom: 5px;
-  line-height: 1.4;
 }
 
-.social-media-list li a,
-.contact-list li a {
+.contact-list a,
+.social-media-list a {
   color: #828282;
   text-decoration: none;
 }
 
-.social-media-list li a:hover,
-.contact-list li a:hover {
+.contact-list a:hover,
+.social-media-list a:hover {
   color: #111111;
   text-decoration: underline;
 }
 
-.svg-icon,
-.icon > svg {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  vertical-align: -1px;
-  margin-right: 4px;
+.social-media-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.svg-icon path,
-.icon > svg path {
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon>svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
   fill: #828282;
 }
 
-a:hover .svg-icon path,
-a:hover .icon > svg path {
+.social-media-list a:hover .icon>svg {
   fill: #111111;
 }
 
-/* Responsive adjustments */
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
 @media screen and (max-width: 800px) {
-  .post-title { font-size: 36px; }
-  .post-content h2 { font-size: 28px; }
-  .post-content h3 { font-size: 22px; }
-  .post-content h4 { font-size: 18px; }
-  .footer-col-1, .footer-col-2 { width: calc(50% - 10px); }
-  .footer-col-3 { width: calc(100% - 10px); text-align: left; }
+
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3 {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .site-header {
-    min-height: 56px;
+  .wrapper {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  #photo-well {
+    float: right !important;
+    width: 40% !important;
+    max-width: 160px !important;
+    min-width: 100px !important;
+    margin: 2px 0 10px 14px !important;
+    padding: 0 !important;
+    text-align: right !important;
+  }
+
+  #photo-well img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 4px !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .home p,
+  .page-content p {
+    font-size: 15px;
+    line-height: 1.45;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    margin-bottom: 10px;
   }
 
   .site-nav {
     position: absolute;
     top: 9px;
-    right: 10px;
-    background-color: #fdfdfd;
+    right: 20px;
+    background-color: #ffffff;
     border: 1px solid #e8e8e8;
     border-radius: 5px;
     text-align: right;
@@ -396,24 +482,23 @@ a:hover .icon > svg path {
     float: right;
     width: 36px;
     height: 36px;
-    line-height: 36px;
-    padding-top: 8px;
+    line-height: 0;
+    padding-top: 10px;
     text-align: center;
+    cursor: pointer;
   }
 
-  .site-nav .menu-icon > svg {
+  .site-nav .menu-icon>svg {
     width: 18px;
     height: 15px;
-  }
-
-  .site-nav .menu-icon > svg path {
     fill: #424242;
+    display: inline-block;
   }
 
   .site-nav .trigger {
     clear: both;
     display: none;
-    padding: 0 10px 10px 10px;
+    padding-bottom: 5px;
   }
 
   .site-nav:hover .trigger,
@@ -423,28 +508,7 @@ a:hover .icon > svg path {
 
   .site-nav .page-link {
     display: block;
-    padding: 6px 10px;
+    padding: 6px 12px;
     margin-right: 0 !important;
-  }
-
-  #photo-well {
-    float: none;
-    margin: 0 auto 20px auto;
-    padding: 0;
-    text-align: center;
-  }
-
-  #photo-well img {
-    margin: 0 auto;
-    max-width: 13em;
-  }
-
-  p {
-    text-align: left;
-  }
-
-  .footer-col {
-    float: none;
-    width: 100% !important;
   }
 }
